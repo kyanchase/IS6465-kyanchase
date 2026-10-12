@@ -1,0 +1,11 @@
+AI tool: AI assistant in VS Code
+
+Prompts used:
+- "I want you to help me go step by step through what needs to be done."
+- "I don't know how to do those things."
+
+How AI helped:
+The AI explained the lab requirements in small steps and described how Bootstrap containers, links, form classes, and the responsive table layout work.
+
+Suggestion I revised:
+I corrected the CSS background color from "fffff" to "#ffffff" so the browser could recognize it as a color.
