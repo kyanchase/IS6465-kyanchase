@@ -1,0 +1,21 @@
+AI tool used
+OpenAI Codex (ChatGPT).
+
+Prompts used (summarized)
+I provided the HW2 assignment and asked for help translating my HW1 wireframes into 
+HTML and CSS. I asked for an explanation of the pages, HTML elements, form attributes, 
+links, and CSS so I could review the code. During testing, I asked why any username 
+and password worked and whether the navigation should say Logout instead of Login.
+
+How AI supported my work
+Codex generated the initial five pages, shared stylesheet, and sample gift-card images. 
+It explained the code and helped troubleshoot opening login.php in Codespaces. 
+I reviewed the implementation and tested the website in Codespaces. I approved the 
+positive minimum values for card value and points and reviewed the responsive layout 
+and static form behavior.
+
+One AI suggestion I changed
+The generated navigation displayed Login on the gift-card pages. After reviewing the 
+website, I questioned that label and changed it to Logout on the list, details, add, 
+and update pages. The link still returns to login.php. This simulates logging out; 
+HW2 does not implement authentication or sessions.
