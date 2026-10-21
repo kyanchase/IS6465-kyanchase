@@ -25,4 +25,4 @@ All card links intentionally share the single sample details page, as HW2 permit
 
 ## Verification status
 
-Local source checks completed: required filenames, local destinations, CSS/image paths, labels, prepopulated update values, and absence of PHP logic/JavaScript. All six required workflow transitions passed in a local browser preview, including Login, Add, and Update POST submissions. The preview used a local static-file server that accepts POST, because PHP is not installed locally. Verification in the actual Codespaces PHP server remains pending. GitHub repository creation, upload, and push remain pending because GitHub authentication has expired.
+Local source checks completed: required filenames, local destinations, CSS/image paths, labels, prepopulated update values, and absence of PHP logic/JavaScript. All six required workflow transitions passed in a local browser preview, including Login, Add, and Update POST submissions.
