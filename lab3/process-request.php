@@ -1,6 +1,14 @@
 <?php
 
-echo "Hello from the server";
+if ($_SERVER["REQUEST_METHOD"] !== "POST") {
+    http_response_code(405);
+    exit("Please submit your request using the tutoring form.");
+}
+
+$course = trim($_POST["course"] ?? "");
+$topic = trim($_POST["topic"] ?? "");
+$preferredDate = trim($_POST["preferreddate"] ?? "");
+$preferredTime = trim($_POST["preferredtime"] ?? "");
 
 /*
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
@@ -13,7 +21,7 @@ $topic = trim($_POST["topic"] ?? "");
 $preferredTime = $_POST["preferredtime"] ?? "";
 */
 
-/*
+
 $errors = [];
 $allowedCourses = ["IS 6465", "IS 6495", "IS 6570"];
 $allowedTimes = ["Morning", "Afternoon", "Evening"];
@@ -25,30 +33,44 @@ if (!in_array($course, $allowedCourses, true)) {
 if (!in_array($preferredTime, $allowedTimes, true)) {
     $errors["preferred_time"] = "Select a valid preferred time.";
 }
-*/
 
 
-/*
+
+
 if ($topic === "" || mb_strlen($topic) > 120) {
     $errors["topic"] = "Enter a topic of 1 to 120 characters.";
 }
 
-$date = DateTime::createFromFormat("Y-m-d", $preferredDate);
+$date = DateTime::createFromFormat("!Y-m-d", $preferredDate);
 $validDate = $date && $date->format("Y-m-d") === $preferredDate;
 
 if (!$validDate) {
     $errors["preferred_date"] = "Enter a valid preferred date.";
+} elseif ($date < new DateTime("today")) {
+    $errors["preferred_date"] = "The preferred date cannot be in the past.";
 }
-*/
 
-/*
+if ($errors) {
+    echo "<h1>Please correct these errors</h1>";
+    echo "<ul>";
+
+    foreach ($errors as $error) {
+        echo "<li>" . htmlspecialchars($error, ENT_QUOTES, "UTF-8") . "</li>";
+    }
+
+    echo "</ul>";
+    echo '<p><a href="request-form.html">Return to the form</a></p>';
+    exit();
+}
+
 if (!$errors) {
     echo "<h1>Request received</h1>";
     echo "<p>Course: " . htmlspecialchars($course, ENT_QUOTES, "UTF-8") . "</p>";
     echo "<p>Topic: " . htmlspecialchars($topic, ENT_QUOTES, "UTF-8") . "</p>";
+    echo "<p>Preferred date: " . htmlspecialchars($preferredDate, ENT_QUOTES, "UTF-8") . "</p>";
+    echo "<p>Preferred time: " . htmlspecialchars($preferredTime, ENT_QUOTES, "UTF-8") . "</p>";
     echo "<p>Status: Pending review</p>";
 }
-*/
 
 
 ?>
