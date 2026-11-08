@@ -1,3 +1,9 @@
+## Project links
+
+Codespaces: https://shiny-barnacle-5gv9rvr7v9vgf74jw.github.dev/
+
+GitHub project: https://github.com/kyanchase/IS6465-kyanchase/tree/main/lab5
+
 # Lab 5 Notes
 
 ## Part 1: Create the database tables
