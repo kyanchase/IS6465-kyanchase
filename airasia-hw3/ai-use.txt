@@ -1,0 +1,16 @@
+AI tool
+OpenAI Codex
+
+Prompts and context
+- “Ok, whats the first step?”
+- “What is the command to create the folder structure that he is looking for?”
+- I supplied the Canvas instructions and shared my Codespaces results as I worked through each step.
+
+How AI supported the work
+Codex helped me locate the AirAsia requirements, organize the project, and draft the SQLite schema, seed data, PHP pages, shared validation, and test harness. It also helped turn the results I observed into the test report.
+
+AI suggestion I tested
+Codex suggested sending a direct POST with cardType=Unknown to test server validation. The app returned HTTP 422 and showed the allowed card types. My SQLite query found zero records named QA Invalid Card.
+
+How I verified the final behavior
+I checked the initial SQLite counts of five accounts and twenty gift cards, verified that PDO read all twenty cards, and went through the list, details, add, update, and delete workflows in Codespaces. I checked malformed and nonexistent IDs and ran the validation harness, which reported five PASS results.

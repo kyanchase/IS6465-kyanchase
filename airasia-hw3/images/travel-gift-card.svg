@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-label="Travel gift card">
+<rect width="720" height="440" rx="30" fill="#273c62"/>
+<circle cx="675" cy="55" r="200" fill="#ffffff" opacity=".08"/>
+<circle cx="675" cy="55" r="130" fill="none" stroke="#ffffff" stroke-opacity=".22" stroke-width="2"/>
+<text x="48" y="72" fill="white" font-family="Arial,sans-serif" font-size="25">AIRASIA REWARDS</text>
+<text x="48" y="220" fill="white" font-family="Arial,sans-serif" font-size="44">Travel gift card</text>
+<text x="48" y="300" fill="white" font-family="Arial,sans-serif" font-size="56">$50.00</text>
+<text x="48" y="393" fill="white" font-family="Arial,sans-serif" font-size="19">SAMPLE GIFT CARD</text>
+</svg>
