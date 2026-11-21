@@ -1,0 +1,7 @@
+database/*.db
+database/*.db-*
+*.log
+.DS_Store
+
+database/*.db
+database/*.db-*
