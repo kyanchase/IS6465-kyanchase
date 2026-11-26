@@ -32,6 +32,7 @@ Our Craving Index project uses direct PHP pages and shared includes. For example
 ## Running app evidence
 
 ![Peer Tutoring Hub showing the saved IS 6465 tutoring request](lab8-confirmation.png)
+[View the running Laravel app screenshot](https://github.com/kyanchase/IS6465-kyanchase/blob/main/lab8/lab8-confirmation.png)
 
 ## Reflection
 
