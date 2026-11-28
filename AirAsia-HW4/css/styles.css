@@ -1,0 +1,51 @@
+/* Shared styles for all five pages. */
+* { box-sizing: border-box; }
+:root { font-family: Arial, Helvetica, sans-serif; color: #20252b; background: #f7f7f5; line-height: 1.55; }
+body { margin: 0; }
+a { color: #8f1723; text-underline-offset: .2em; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible, input:focus-visible, button:focus-visible { outline: 3px solid #1765a5; outline-offset: 4px; }
+.skip-link { position: absolute; left: 1rem; top: -5rem; padding: .7rem; background: white; z-index: 2; }
+.skip-link:focus { top: 1rem; }
+.site-header { min-height: 90px; padding: 20px max(6vw, 24px); display: flex; align-items: center; justify-content: space-between; gap: 24px; background: white; border-bottom: 1px solid #deded9; }
+.brand { color: #a71927; font-weight: 800; font-size: 1.6rem; text-decoration: none; letter-spacing: -.05em; }
+.brand span { color: #353a40; font-weight: 400; font-size: 1rem; letter-spacing: 0; margin-left: 10px; }
+nav { display: flex; flex-wrap: wrap; gap: 25px; }
+nav a { color: #343940; font-size: .95rem; }
+main { max-width: 1120px; margin: 0 auto; padding: 64px 24px 80px; min-height: calc(100vh - 165px); }
+h1 { font-size: clamp(2rem, 4vw, 3rem); letter-spacing: -.04em; line-height: 1.14; margin: 10px 0 18px; }
+h2 { font-size: 1.3rem; line-height: 1.3; margin: 8px 0 22px; }
+h2 a { color: #20252b; }
+.eyebrow { font-size: .73rem; font-weight: 700; letter-spacing: .13em; color: #6b4145; margin: 0; text-transform: uppercase; }
+.intro { color: #5b6168; margin-bottom: 28px; }
+.panel { background: white; border: 1px solid #deded9; padding: 40px; border-radius: 12px; }
+.login-panel { max-width: 540px; margin: 0 auto; }
+.login-panel h1 { font-size: 2.5rem; }
+.form-panel { max-width: 640px; margin: 25px auto 0; }
+.form-panel h1 { font-size: 2.3rem; }
+.field { margin-bottom: 22px; }
+label { display: block; font-weight: 600; margin-bottom: 7px; }
+input { width: 100%; font: inherit; padding: 11px 13px; border: 1px solid #939aa1; border-radius: 5px; background: #fff; color: #20252b; }
+.button, button { display: inline-block; padding: 12px 22px; border: 1px solid #a71927; border-radius: 5px; background: #a71927; color: white; font: inherit; font-weight: 600; text-align: center; text-decoration: none; cursor: pointer; }
+.button:hover, button:hover { background: #85121e; color: white; }
+.secondary { color: #383e45; border-color: #aeb3b7; background: white; }
+.secondary:hover { background: #eee; color: #20252b; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.hint { font-size: .84rem; color: #60666d; margin: 24px 0 0; }
+.page-heading { display: flex; align-items: center; justify-content: space-between; gap: 25px; margin-bottom: 30px; }
+.card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.gift-card { border: 1px solid #deded9; border-radius: 10px; overflow: hidden; background: white; }
+.image-link { display: block; padding: 20px 20px 0; }
+img { max-width: 100%; height: auto; display: block; }
+.card-body { padding: 23px; }
+.points { font-size: 1.5rem; font-weight: 700; margin: 0; }
+.points span { display: block; font-size: .85rem; font-weight: 400; color: #60666d; }
+.back-link { display: inline-block; margin-bottom: 25px; }
+.detail-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 45px; align-items: start; }
+.detail-layout h1 { font-size: 2.2rem; }
+.detail-image { margin-top: 8px; }
+dl { margin: 25px 0 30px; }
+dl div { display: flex; justify-content: space-between; gap: 20px; padding: 12px 0; border-bottom: 1px solid #e5e6e3; }
+dt { color: #5b6168; } dd { margin: 0; font-weight: 600; text-align: right; }
+footer { padding: 24px; text-align: center; font-size: .8rem; color: #686e75; }
+@media (max-width: 720px) { .site-header { align-items: flex-start; flex-direction: column; gap: 12px; } main { padding-top: 35px; } .card-grid, .detail-layout { grid-template-columns: 1fr; } .page-heading { align-items: flex-start; flex-direction: column; } .panel { padding: 25px; } .detail-layout { gap: 25px; } }

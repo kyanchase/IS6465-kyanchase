@@ -1,0 +1,11 @@
+HW4 AI Use
+
+Tool used: ChatGPT (Codex)
+
+I asked Codex to use my HW3 AirAsia project as the starting point for HW4, package the updated project in a ZIP, and walk me through setup and testing in Codespaces. Codex copied my existing HW3 gift-card files, updated them for HW4, and generated new files for login and logout, session protection, server-side role checks, customer creation, account profiles, and rewards redemption. It also updated the database schema and seed data and prepared a test report with expected results for me to verify.
+
+As I set up and tested the app, we talked through how the new and updated files work together. We compared my HW3 schema and seed data with the AirAsia requirements and discussed how USER and REDEMPTION relate to ACCOUNT and GIFTCARD. We covered how customer creation uses password_hash(), how login uses password_verify() and starts an authenticated session, and how server-side role checks protect the existing gift-card pages. We also discussed how the app rejects duplicate usernames, how My Account uses the signed-in user's ID to load the correct balance, and how a PDO transaction records the redemption and deducts points together.
+
+One change I tested was the PHP compatibility fix. My Codespace reported that str_ends_with() was undefined. Codex suggested replacing it with a substr() check and replacing str_contains() with a strpos() check. I applied the changes, ran PHP's syntax check on both edited files, and confirmed that I could open the app and sign in.
+
+I tested Admin and Customer login, invalid login, logout, direct access to protected pages, customer creation, and duplicate username rejection. I checked that changing the profile URL still showed my signed-in test account. I tried both a successful redemption and a redemption with insufficient points, checked the saved record and balance in SQLite, and recorded my results in test-report.md.
